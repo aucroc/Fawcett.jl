@@ -7,7 +7,7 @@ using Plots
 y_true = [1, 1, 0, 1, 1, 1, 0, 0, 1, 0];
 y_pred = [0.9, 0.8, 0.7, 0.6, 0.55, 0.54, 0.53, 0.52, 0.51, 0.505];
 
-out = Fawcett.generate_roc_points(y_true, y_pred)
+out = Fawcett.FawcettROC.roc(y_true, y_pred)
 
 x = first.(out)
 y = last.(out)
