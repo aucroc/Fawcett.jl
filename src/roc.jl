@@ -20,8 +20,11 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+module FawcettROC
 
-function generate_roc_points(y_true::Vector{Int64}, y_pred::Vector{Float64})
+export roc
+
+function roc(y_true::Vector{Int64}, y_pred::Vector{Float64})
     n_pos = sum(y_true .== 1)
     n_neg = length(y_true) - n_pos
 
@@ -58,3 +61,5 @@ function generate_roc_points(y_true::Vector{Int64}, y_pred::Vector{Float64})
     return r_out
 
 end
+
+end # module
