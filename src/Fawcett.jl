@@ -24,5 +24,6 @@
 module Fawcett
 
 include("roc.jl")
+include("auc.jl")
 
 end # module
