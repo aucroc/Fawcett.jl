@@ -23,6 +23,6 @@
 
 module Fawcett
 
-include("roc_points.jl")
+include("roc.jl")
 
 end # module
