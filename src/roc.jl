@@ -22,8 +22,6 @@
 
 module FawcettROC
 
-export roc
-
 function roc(y_true::Vector{Int64}, y_pred::Vector{Float64})
     n_pos = sum(y_true .== 1)
     n_neg = length(y_true) - n_pos
